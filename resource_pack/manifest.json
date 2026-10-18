@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Metal Sonic Resource Pack",
+    "description": "Classic-inspired Metal Sonic model and textures.",
+    "uuid": "e7a7d3c9-2f61-47bc-8b18-9c02c20a2213",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "71ac78e8-9dd2-4b5d-95af-58f3a37a3314",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
