@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hedge:metal_sonic",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/metal_sonic"
+      },
+      "geometry": {
+        "default": "geometry.metal_sonic"
+      },
+      "render_controllers": [
+        "controller.render.metal_sonic"
+      ],
+      "spawn_egg": {
+        "base_color": "#167ac6",
+        "overlay_color": "#e52d32"
+      }
+    },
+    "components": {
+      "minecraft:client_animation": {
+        "idle": "animation.metal_sonic.idle"
+      }
+    }
+  }
+}
