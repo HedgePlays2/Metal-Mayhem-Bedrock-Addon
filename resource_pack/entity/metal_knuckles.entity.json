@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hedge:metal_knuckles",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/metal_knuckles"
+      },
+      "geometry": {
+        "default": "geometry.metal_knuckles"
+      },
+      "render_controllers": [
+        "controller.render.metal_knuckles"
+      ],
+      "spawn_egg": {
+        "base_color": "#b91f28",
+        "overlay_color": "#d6d9df"
+      },
+      "animations": {
+        "idle": "animation.metal_knuckles.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}
