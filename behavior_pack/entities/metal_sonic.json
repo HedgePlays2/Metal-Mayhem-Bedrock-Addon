@@ -9,10 +9,7 @@
     },
     "components": {
       "minecraft:type_family": {
-        "family": [
-          "metal_sonic",
-          "monster"
-        ]
+        "family": ["metal_sonic", "monster"]
       },
       "minecraft:nameable": {},
       "minecraft:health": {
@@ -48,13 +45,23 @@
       },
       "minecraft:tameable": {
         "probability": 0.25,
-        "tame_items": [
-          "hedge:golden_ring"
-        ],
+        "tame_items": ["hedge:golden_ring"],
         "tame_event": {
           "event": "hedge:on_tame",
           "target": "self"
         }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "hedge:enter_boss_mode",
+              "target": "self"
+            }
+          }
+        ]
       },
       "minecraft:behavior.float": {
         "priority": 0
@@ -91,15 +98,29 @@
     "events": {
       "hedge:on_tame": {
         "add": {
-          "component_groups": [
-            "hedge:tamed"
-          ]
+          "component_groups": ["hedge:tamed"]
+        }
+      },
+      "hedge:enter_boss_mode": {
+        "add": {
+          "component_groups": ["hedge:boss_mode"]
         }
       }
     },
     "component_groups": {
       "hedge:tamed": {
         "minecraft:is_tamed": {}
+      },
+      "hedge:boss_mode": {
+        "minecraft:movement": {
+          "value": 0.4
+        },
+        "minecraft:attack": {
+          "damage": 10
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 0
+        }
       }
     }
   }
