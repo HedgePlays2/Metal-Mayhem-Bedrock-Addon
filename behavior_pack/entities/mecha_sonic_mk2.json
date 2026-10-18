@@ -49,7 +49,7 @@
       "minecraft:tameable": {
         "probability": 0.25,
         "tame_items": [
-          "hedge:golden_ring"
+          "minecraft:lapis_lazuli"
         ],
         "tame_event": {
           "event": "hedge:mecha_sonic_mk2_tamed",
