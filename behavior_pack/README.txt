@@ -1,0 +1,1 @@
+Behavior pack source for Metal Sonic. Target: Minecraft Bedrock 26.32.
