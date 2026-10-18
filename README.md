@@ -1,31 +1,18 @@
-# Sonic Robots — Minecraft Bedrock Add-On
+# Metal Mayhem — Sonic Robots Minecraft Bedrock Add-On
 
 A fan-made Sonic robot add-on project targeting Minecraft Bedrock **26.32**.
 
-## Current source files
-- `behavior_pack/` — behavior pack manifest, entity definition, Golden Ring item and recipe
-- `resource_pack/` — resource pack manifest, entity client definition, model geometry, render controller and animation
+## Robot roster
+- **Metal Sonic** — custom Golden Rings for taming; 25% planned chance per ring; mini-boss mode and Metal Sonic Core/armor are planned.
+- **Mecha Sonic Mark II** — heavy hitter; Golden Rings for taming.
+- **Tails Doll** — eerie plush-like robot; Golden Rings for taming.
+- **Metal Knuckles** — bruiser; **emeralds only** for taming. Golden Rings must not tame him.
 
-## Planned gameplay
+The three additional robots now have initial behavior entity JSON, client entity definitions, geometry, render-controller and idle-animation files, plus starter loot tables. These are source scaffolds and need in-game validation; the models are block-based approximations, not finished game-accurate models.
 
-All four robots are tamable companions that follow their owner and fight hostile mobs. **Taming items differ by robot:**
-- **Metal Sonic:** custom Golden Rings, with a random chance per ring (25% planned)
-- **Mecha Sonic Mark II:** custom Golden Rings, with a random chance per ring
-- **Tails Doll:** custom Golden Rings, with a random chance per ring
-- **Metal Knuckles:** **emeralds only** — Golden Rings cannot tame him
-
-### Metal Sonic
-- Classic-inspired blue Metal Sonic with red eyes, long quills, red chest panel and hover shoes
-- When hit, enters mini-boss mode and retaliates
-- Aim for a blue, vanilla-style boss health bar
-- Drops a rare Metal Sonic Core used to craft **Metal Sonic Armor**, intended to be exceptionally difficult to obtain and the strongest armor set in the add-on
-
-### Additional robot bosses
-- **Mecha Sonic Mark II** — heavy-hitting boss with powerful charge/spin attacks and its own rare drop
-- **Tails Doll** — eerie floating boss with hovering and surprise attacks, plus a unique drop
-- **Metal Knuckles** — close-range bruiser with powerful punches and a charging attack, plus a unique drop
-
-Each boss, taming behavior, drop, armor recipe, boss bar and special attack still needs implementation and testing. The blue Metal Sonic boss bar is a design goal; it is not implemented yet.
-
-## Status
-The JSON/source scaffolding is in progress. **This repository does not yet contain the finished PNG textures or an import-ready `.mcaddon` file.** The model geometry is an initial block-style approximation and still needs a polished texture/model pass and in-game validation for Bedrock 26.32.
+## Important status notes
+- Taming/follow/combat behavior is scaffolded but not yet tested in Minecraft Bedrock 26.32.
+- Loot tables currently use a temporary iron-ingot drop and must be replaced with each robot's intended unique rare drop.
+- The client definitions refer to PNG textures that still need to be created. Until those textures exist, the robots will not have their intended appearances.
+- The blue vanilla-style Metal Sonic boss bar, Metal Sonic Core, crafting recipe for the strongest Metal Sonic Armor set, and special attacks are still planned and not implemented.
+- No import-ready `.mcaddon` has been built yet.
