@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hedge:tails_doll",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/tails_doll"
+      },
+      "geometry": {
+        "default": "geometry.tails_doll"
+      },
+      "render_controllers": [
+        "controller.render.tails_doll"
+      ],
+      "spawn_egg": {
+        "base_color": "#e87527",
+        "overlay_color": "#d9262e"
+      },
+      "animations": {
+        "idle": "animation.tails_doll.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}
