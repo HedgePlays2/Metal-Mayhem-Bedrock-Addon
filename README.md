@@ -1,4 +1,4 @@
-# Metal Mayhem — Sonic Robots Minecraft Bedrock Add-On
+# Metal Mayhem — Minecraft Bedrock Add-On
 
 A fan-made Sonic robot add-on project targeting Minecraft Bedrock **26.32**.
 
