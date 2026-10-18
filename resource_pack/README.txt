@@ -1,0 +1,1 @@
+Texture placeholders are planned here. The PNG textures and final .mcaddon packaging are not yet included.
