@@ -8,7 +8,11 @@ A fan-made Sonic robot add-on project targeting Minecraft Bedrock **26.32**.
 
 ## Planned gameplay
 
-**All four robots can be tamed** with custom Golden Rings, using a random chance per ring. Once tamed, they follow their owner and fight hostile mobs for them.
+All four robots are tamable companions that follow their owner and fight hostile mobs. **Taming items differ by robot:**
+- **Metal Sonic:** custom Golden Rings, with a random chance per ring (25% planned)
+- **Mecha Sonic Mark II:** custom Golden Rings, with a random chance per ring
+- **Tails Doll:** custom Golden Rings, with a random chance per ring
+- **Metal Knuckles:** **emeralds only** — Golden Rings cannot tame him
 
 ### Metal Sonic
 - Classic-inspired blue Metal Sonic with red eyes, long quills, red chest panel and hover shoes
