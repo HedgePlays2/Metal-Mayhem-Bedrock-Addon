@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Metal Sonic Behavior Pack",
+    "description": "Adds tameable Metal Sonic for Bedrock 26.32.",
+    "uuid": "cdb6d347-3c4d-4f63-9a1b-7a8c9baf0a11",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "0fbc29d8-3f6c-4a5e-8f5c-6b07c1a0d112",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "e7a7d3c9-2f61-47bc-8b18-9c02c20a2213",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
