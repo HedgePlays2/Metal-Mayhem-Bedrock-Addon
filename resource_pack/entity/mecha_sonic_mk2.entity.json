@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "hedge:mecha_sonic_mk2",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/mecha_sonic_mk2"
+      },
+      "geometry": {
+        "default": "geometry.mecha_sonic_mk2"
+      },
+      "render_controllers": [
+        "controller.render.mecha_sonic_mk2"
+      ],
+      "spawn_egg": {
+        "base_color": "#a9b4c4",
+        "overlay_color": "#c82d36"
+      },
+      "animations": {
+        "idle": "animation.mecha_sonic_mk2.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      }
+    }
+  }
+}
