@@ -1,0 +1,51 @@
+name: Build Metal Mayhem MCAddon
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "behavior_pack/**"
+      - "resource_pack/**"
+      - "pack_icon.png"
+      - ".github/workflows/build-mcaddon.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Prepare pack icons
+        run: |
+          test -f pack_icon.png
+          cp pack_icon.png behavior_pack/pack_icon.png
+          cp pack_icon.png resource_pack/pack_icon.png
+
+      - name: Validate pack manifests
+        run: |
+          python - <<'PY'
+          import json
+          for path in ("behavior_pack/manifest.json", "resource_pack/manifest.json"):
+              with open(path, encoding="utf-8") as f:
+                  manifest = json.load(f)
+              assert manifest.get("format_version") == 2, f"Unexpected format_version in {path}"
+              assert manifest.get("header", {}).get("uuid"), f"Missing header UUID in {path}"
+              assert manifest.get("modules"), f"Missing modules in {path}"
+              print(f"Manifest OK: {path}")
+          PY
+
+      - name: Package importable add-on
+        run: |
+          zip -r Metal-Mayhem.mcaddon behavior_pack resource_pack
+
+      - name: Upload MCAddon artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Metal-Mayhem-Bedrock-Addon
+          path: Metal-Mayhem.mcaddon
+          if-no-files-found: error
