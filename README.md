@@ -8,7 +8,7 @@ A fan-made Sonic robot add-on project targeting Minecraft Bedrock **26.32**.
 - **Tails Doll** — eerie plush-like robot; **redstone dust** for taming, 25% chance per item.
 - **Metal Knuckles** — bruiser; **emeralds only** for taming. Golden Rings must not tame him.
 
-The three additional robots have behavior entity JSON, client entity definitions, geometry, render-controller and idle-animation files, plus starter loot tables. Initial 64×64 pixel-art texture PNGs have now been added for all four robots. These are first-pass visuals; the models remain block-based approximations and need refinement and in-game validation.
+All four robots now have revised Bedrock geometry files with more character-specific shapes: swept-back quills for Metal Sonic and Mecha Sonic Mk.II, plush ears and antenna for Tails Doll, and dreadlocks plus oversized spiked fists for Metal Knuckles. Initial 64×64 pixel-art textures are also included. These are still block-based voxel-style models and need in-game validation and visual polishing.
 
 ## Important status notes
 - Taming/follow/combat behavior is scaffolded but not yet tested in Minecraft Bedrock 26.32.
