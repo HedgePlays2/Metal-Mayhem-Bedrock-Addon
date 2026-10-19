@@ -26,22 +26,42 @@ jobs:
           cp pack_icon.png behavior_pack/pack_icon.png
           cp pack_icon.png resource_pack/pack_icon.png
 
-      - name: Validate pack manifests
+      - name: Validate all JSON files and pack manifests
         run: |
           python - <<'PY'
           import json
-          for path in ("behavior_pack/manifest.json", "resource_pack/manifest.json"):
-              with open(path, encoding="utf-8") as f:
+          from pathlib import Path
+
+          for root in (Path("behavior_pack"), Path("resource_pack")):
+              files = sorted(root.rglob("*.json"))
+              if not files:
+                  raise SystemExit(f"No JSON files found under {root}")
+              for path in files:
+                  with path.open(encoding="utf-8") as f:
+                      json.load(f)
+                  print(f"JSON OK: {path}")
+
+          for path in (Path("behavior_pack/manifest.json"), Path("resource_pack/manifest.json")):
+              with path.open(encoding="utf-8") as f:
                   manifest = json.load(f)
               assert manifest.get("format_version") == 2, f"Unexpected format_version in {path}"
               assert manifest.get("header", {}).get("uuid"), f"Missing header UUID in {path}"
               assert manifest.get("modules"), f"Missing modules in {path}"
               print(f"Manifest OK: {path}")
+
+          behavior_manifest = json.loads(Path("behavior_pack/manifest.json").read_text(encoding="utf-8"))
+          resource_uuid = json.loads(Path("resource_pack/manifest.json").read_text(encoding="utf-8"))["header"]["uuid"]
+          dependencies = behavior_manifest.get("dependencies", [])
+          assert any(dep.get("uuid") == resource_uuid for dep in dependencies), "Behavior pack does not depend on this resource pack UUID"
+          print("Behavior/resource pack dependency OK")
           PY
 
-      - name: Package importable add-on
+      - name: Package behavior and resource packs
         run: |
-          zip -r Metal-Mayhem.mcaddon behavior_pack resource_pack
+          (cd behavior_pack && zip -qr ../Metal-Mayhem-Behavior.mcpack .)
+          (cd resource_pack && zip -qr ../Metal-Mayhem-Resources.mcpack .)
+          zip -q -j Metal-Mayhem.mcaddon Metal-Mayhem-Behavior.mcpack Metal-Mayhem-Resources.mcpack
+          unzip -l Metal-Mayhem.mcaddon
 
       - name: Upload MCAddon artifact
         uses: actions/upload-artifact@v4
