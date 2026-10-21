@@ -1,13 +1,13 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Metal Sonic Behavior Pack",
-    "description": "Adds tameable Metal Sonic for Bedrock 26.32.",
+    "name": "Metal Mayhem Behavior Pack",
+    "description": "Adds four tameable Sonic robot companions for Bedrock 26.32.",
     "uuid": "cdb6d347-3c4d-4f63-9a1b-7a8c9baf0a11",
     "version": [
       1,
       0,
-      0
+      1
     ],
     "min_engine_version": [
       1,
@@ -22,7 +22,7 @@
       "version": [
         1,
         0,
-        0
+        1
       ]
     }
   ],
@@ -32,7 +32,7 @@
       "version": [
         1,
         0,
-        0
+        1
       ]
     }
   ]
