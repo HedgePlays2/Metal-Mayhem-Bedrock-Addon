@@ -18,11 +18,14 @@
       "spawn_egg": {
         "base_color": "#167ac6",
         "overlay_color": "#e52d32"
-      }
-    },
-    "components": {
-      "minecraft:client_animation": {
+      },
+      "animations": {
         "idle": "animation.metal_sonic.idle"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
       }
     }
   }
