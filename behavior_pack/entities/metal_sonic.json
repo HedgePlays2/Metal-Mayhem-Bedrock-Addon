@@ -9,7 +9,10 @@
     },
     "components": {
       "minecraft:type_family": {
-        "family": ["metal_sonic", "monster"]
+        "family": [
+          "metal_sonic",
+          "monster"
+        ]
       },
       "minecraft:nameable": {},
       "minecraft:health": {
@@ -45,7 +48,9 @@
       },
       "minecraft:tameable": {
         "probability": 0.25,
-        "tame_items": ["hedge:golden_ring"],
+        "tame_items": [
+          "hedge:golden_ring"
+        ],
         "tame_event": {
           "event": "hedge:on_tame",
           "target": "self"
@@ -93,17 +98,24 @@
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
+      },
+      "minecraft:scale": {
+        "value": 1.25
       }
     },
     "events": {
       "hedge:on_tame": {
         "add": {
-          "component_groups": ["hedge:tamed"]
+          "component_groups": [
+            "hedge:tamed"
+          ]
         }
       },
       "hedge:enter_boss_mode": {
         "add": {
-          "component_groups": ["hedge:boss_mode"]
+          "component_groups": [
+            "hedge:boss_mode"
+          ]
         }
       }
     },
