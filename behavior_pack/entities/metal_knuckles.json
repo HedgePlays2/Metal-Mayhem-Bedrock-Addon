@@ -10,8 +10,7 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "metal_knuckles",
-          "monster"
+          "metal_knuckles"
         ]
       },
       "minecraft:nameable": {},
