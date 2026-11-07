@@ -10,8 +10,7 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "mecha_sonic",
-          "monster"
+          "mecha_sonic"
         ]
       },
       "minecraft:nameable": {},
