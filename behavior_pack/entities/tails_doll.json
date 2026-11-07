@@ -10,8 +10,7 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "tails_doll",
-          "monster"
+          "tails_doll"
         ]
       },
       "minecraft:nameable": {},
