@@ -10,7 +10,8 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "mecha_sonic"
+          "mecha_sonic",
+          "metal_mayhem_robot"
         ]
       },
       "minecraft:nameable": {},
@@ -75,18 +76,25 @@
         "speed_multiplier": 1.2,
         "track_target": true
       },
-      "minecraft:behavior.hurt_by_target": {
-        "priority": 4
-      },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 6,
         "must_see": false,
         "entity_types": [
           {
             "filters": {
-              "test": "is_family",
-              "subject": "other",
-              "value": "monster"
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "monster"
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "metal_mayhem_robot"
+                }
+              ]
             },
             "max_dist": 24
           }
