@@ -20,11 +20,21 @@
         "overlay_color": "#d6d9df"
       },
       "animations": {
-        "idle": "animation.metal_knuckles.idle"
+        "idle": "animation.metal_knuckles.idle",
+        "walk": "animation.metal_knuckles.walk",
+        "attack": "animation.metal_knuckles.attack"
       },
       "scripts": {
         "animate": [
-          "idle"
+          "idle",
+          [
+            "walk",
+            "query.modified_move_speed > 0.05"
+          ],
+          [
+            "attack",
+            "query.is_attacking"
+          ]
         ]
       }
     }
