@@ -22,7 +22,8 @@
       "animations": {
         "idle": "animation.mecha_sonic_mk2.idle",
         "walk": "animation.mecha_sonic_mk2.walk",
-        "attack": "animation.mecha_sonic_mk2.attack"
+        "attack": "animation.mecha_sonic_mk2.attack",
+        "spin_attack": "animation.mecha_sonic_mk2.spin_attack"
       },
       "scripts": {
         "animate": [
@@ -32,7 +33,7 @@
             "query.modified_move_speed > 0.05"
           ],
           [
-            "attack",
+            "spin_attack",
             "query.is_attacking"
           ]
         ]
