@@ -20,11 +20,16 @@
         "overlay_color": "#d9262e"
       },
       "animations": {
-        "idle": "animation.tails_doll.idle"
+        "idle": "animation.tails_doll.idle",
+        "walk": "animation.tails_doll.hover"
       },
       "scripts": {
         "animate": [
-          "idle"
+          "idle",
+          [
+            "walk",
+            "query.modified_move_speed > 0.05"
+          ]
         ]
       }
     }
