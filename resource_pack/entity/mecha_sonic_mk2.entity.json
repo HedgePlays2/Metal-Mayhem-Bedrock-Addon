@@ -16,8 +16,8 @@
         "controller.render.mecha_sonic_mk2"
       ],
       "spawn_egg": {
-        "base_color": "#a9b4c4",
-        "overlay_color": "#c82d36"
+        "base_color": "#176AC8",
+        "overlay_color": "#E5E9EF"
       },
       "animations": {
         "idle": "animation.mecha_sonic_mk2.idle"
