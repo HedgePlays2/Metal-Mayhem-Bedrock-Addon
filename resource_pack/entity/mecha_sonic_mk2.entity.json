@@ -10,7 +10,8 @@
         "default": "textures/entity/mecha_sonic_mk2"
       },
       "geometry": {
-        "default": "geometry.mecha_sonic_mk2"
+        "default": "geometry.mecha_sonic_mk2",
+        "spin": "geometry.mecha_sonic_mk2_spin"
       },
       "render_controllers": [
         "controller.render.mecha_sonic_mk2"
