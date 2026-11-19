@@ -2,7 +2,7 @@
   "format_version": "1.8.0",
   "render_controllers": {
     "controller.render.mecha_sonic_mk2": {
-      "geometry": "Geometry.default",
+      "geometry": "query.is_attacking ? Geometry.spin : Geometry.default",
       "materials": [
         {
           "*": "Material.default"
