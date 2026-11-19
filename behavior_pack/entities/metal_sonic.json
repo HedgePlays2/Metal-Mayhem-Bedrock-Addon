@@ -10,7 +10,8 @@
     "components": {
       "minecraft:type_family": {
         "family": [
-          "metal_sonic"
+          "metal_sonic",
+          "metal_mayhem_robot"
         ]
       },
       "minecraft:nameable": {},
@@ -128,9 +129,6 @@
         },
         "minecraft:attack": {
           "damage": 10
-        },
-        "minecraft:behavior.hurt_by_target": {
-          "priority": 0
         }
       }
     }
