@@ -10,8 +10,7 @@
         "default": "textures/entity/mecha_sonic_mk2"
       },
       "geometry": {
-        "default": "geometry.mecha_sonic_mk2",
-        "spin": "geometry.mecha_sonic_mk2_spin"
+        "default": "geometry.mecha_sonic_mk2"
       },
       "render_controllers": [
         "controller.render.mecha_sonic_mk2"
@@ -23,8 +22,7 @@
       "animations": {
         "idle": "animation.mecha_sonic_mk2.idle",
         "walk": "animation.mecha_sonic_mk2.walk",
-        "attack": "animation.mecha_sonic_mk2.attack",
-        "spin_attack": "animation.mecha_sonic_mk2.spin_attack"
+        "attack": "animation.mecha_sonic_mk2.attack"
       },
       "scripts": {
         "animate": [
@@ -32,10 +30,6 @@
           [
             "walk",
             "query.modified_move_speed > 0.05"
-          ],
-          [
-            "spin_attack",
-            "query.is_attacking"
           ]
         ]
       }
